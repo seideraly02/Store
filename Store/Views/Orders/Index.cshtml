@@ -1,0 +1,37 @@
+@model List<Order>
+
+@{
+    ViewBag.Title = "Заказы";
+    Layout = "_Layout";
+}
+
+<h2>Список устройств</h2>
+<div class="table_section">
+    <a asp-action="Create" asp-controller="Phones">добавить телефон</a>
+    @if (@Model.Count == 0)
+    {
+        <p>Список пуст</p>
+    }
+    else
+    {
+        <table class="custom_table" style="width: 100%">
+            <tr>
+                <td>Id</td>
+                <td>Имя покупателя</td>
+                <td>Адрес доставки</td>
+                <td>Номер телефона</td>
+                <td>Найменование товара</td>
+            </tr>
+            @foreach (var Order in Model)
+            {
+                <tr>
+                    <td>@Order.Id</td>
+                    <td>@Order.Name</td>
+                    <td>@Order.Address</td>
+                    <td>@Order.ContactPhone</td>
+                    <td>@Order.Phone.Name</td>
+                </tr>
+            }
+        </table>
+    }
+</div>

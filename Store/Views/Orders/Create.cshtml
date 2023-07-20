@@ -1,0 +1,35 @@
+@model Order
+
+@{
+    ViewBag.Title = "cоздать заказ";
+    Layout = "_Layout";
+}
+
+<h2>запаолните форму для создания заказа</h2>
+
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Create" asp-controller = "Orders"    method="post"></form>
+        <div class="form_row">
+            <label for="">
+                Имя покупателя
+                <input asp-for="Name" type="text">
+            </label>
+            <label for="">
+                Адерс поставки
+                <input asp-for="Address" type="text">
+            </label>
+            <label for="">
+                Номер телефона
+                <input asp-for="ContactPhone" type="text">
+                
+            </label>
+            <label for="">
+                Найменование продукта
+                <input value = "@Model.Phone.Name" disabled type="text">
+                <input type ="hidden" asp-for="PhoneId" value = "@Model.Phone.Id">
+            </label>
+        </div>
+        <button type="submit">заказать</button>
+    </div>
+</div>

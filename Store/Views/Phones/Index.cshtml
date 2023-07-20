@@ -20,6 +20,7 @@
                 <td>Название</td>
                 <td>Бренд</td>
                 <td>Стоймость</td>
+                <td>Действие</td>
             </tr>
             @foreach (var phone in @Model)
             {
@@ -28,6 +29,7 @@
                     <td>@phone.Name</td>
                     <td>@phone.Brand</td>
                     <td>@phone.Price</td>
+                    <td><a asp-action="Create" asp-controller="Orders" asp-route-phoneId="@phone.Id">Заказать</a></td>
                 </tr>
             }
         </table>
