@@ -29,7 +29,10 @@
                     <td>@phone.Name</td>
                     <td>@phone.Brand</td>
                     <td>@phone.Price</td>
-                    <td><a asp-action="Create" asp-controller="Orders" asp-route-phoneId="@phone.Id">Заказать</a></td>
+                    <td><a asp-action="Create" asp-controller="Orders" asp-route-phoneId="@phone.Id">Заказать</a>
+                        <a asp-action="Edit" asp-controller="Phones" asp-route-id="@phone.Id">Редактировать</a>
+                         <a asp-action="Delete" asp-controller="Phones" asp-route-id="@phone.Id">Удалить</a>
+                    </td>
                 </tr>
             }
         </table>

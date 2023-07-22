@@ -1,0 +1,11 @@
+@model CreatePhoneViewModel
+
+<div class="col-md-6">
+   <form asp-action="Edit" asp-controller="Phones" method="post">
+      @{
+          Html.RenderPartial("PartialViews/FormPartial", Model);
+      }
+      <button type="submit">Сохранить</button>
+   </form>
+</div>
+

@@ -1,0 +1,20 @@
+@{
+    ViewBag.Title = "Подтверждение";
+    Layout = "_Layout";
+}
+
+<h2>Подтверждение удаления</h2>
+
+<form method="post" asp-action="Delete" asp-controller="Phones" asp-route-id="@Model.Id">
+    <p>Вы действительно хотите удалить устройство @Model.Name ?</p>
+    <input type="submit" value="Да"> 
+    <a asp-action="Index" asp-controller="Phones">Нет</a>
+</form>
+
+
+Колонка с ссылками в списке устройств теперь будет выглядеть следующим образом : 
+<td>
+                    <a asp-action="Create" asp-controller="Orders" asp-route-phoneId="@Model.Phone.Id">Заказать</a>
+                    <a asp-action="Edit" asp-controller="Phones" asp-route-id="@Model.Phone.Id">Редактировать</a>
+                    <a asp-action="Delete" asp-controller="Phones" asp-route-id="@Model.Phone.Id">Удалить</a>
+                </td>

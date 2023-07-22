@@ -22,12 +22,10 @@
             <label for="">
                 Номер телефона
                 <input asp-for="ContactPhone" type="text">
-                
             </label>
             <label for="">
                 Найменование продукта
-                <input value = "@Model.Phone.Name" disabled type="text">
-                <input type ="hidden" asp-for="PhoneId" value = "@Model.Phone.Id">
+                <input asp-for="@Model.Phone.Name" type="text">
             </label>
         </div>
         <button type="submit">заказать</button>

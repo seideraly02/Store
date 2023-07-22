@@ -1,4 +1,4 @@
-@model Phone;
+@model CreatePhoneViewModel;
 
 @{
     ViewBag.Title = "Добавить смартфон";
@@ -13,19 +13,19 @@
             <div class="form_row">
                 <label for="">
                     Название
-                    <input asp-for="Name" type="text">
+                    <input asp-for="@Model.Phone.Name" type="text">
                 </label>
             </div>
             <div class="form_row">
                 <label for="">
                     Бренд
-                    <input asp-for="Brand"type="text">
+                    <input asp-for="@Model.Phone.Brand"type="text">
                 </label>
             </div>
             <div class="form_row">
                 <label for="">
                     Стоимость
-                    <input asp-for="Price" type="text">
+                    <input asp-for="@Model.Phone.Price" type="text">
                 </label>
             </div>
             <button type="submit"> Добавить</button>

@@ -6,12 +6,9 @@ namespace Store.Models
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public string Brand { get; set; }
         public double Price { get; set; }
-        
-        public override string ToString()
-        {
-            return $"{Id} - {Name} - {Brand} - {Price}";
-        }
+        public Brand BrandId { get; set; }
+        public Brand Brand { get; set; }
+      
     }
 }

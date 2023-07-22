@@ -7,6 +7,7 @@ namespace Store.Models
     {
         public DbSet<Phone> Phones { get; set; }
         public DbSet<Order> Orders { get; set; }
+        public DbSet<Brand> Brands { get; set; }
 
         public StoreContext(DbContextOptions<StoreContext> options)
             : base(options){} 

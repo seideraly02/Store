@@ -1,0 +1,27 @@
+@model Brand
+
+@{
+    ViewBag.Title = "Создание бренда";
+    Layout = "_Layout";
+}
+
+<h2>ЗАполниете форму для создания бренда</h2>
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Create" asp-controller="Brands" method="post" >
+            <div class="form_row">
+                <label for="">
+                    Найменование компании
+                    <input asp-for="Name" type="text">
+                </label>
+            </div>
+            <div class="form_row">
+                <label for="">
+                    Адрес компании
+                    <input asp-for="Address" type="text">
+                </label>
+            </div>
+            <input type="submit" value="Создать">
+        </form>
+    </div>
+</div>
